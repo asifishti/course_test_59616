@@ -1,0 +1,17 @@
+import csv
+import numpy as np
+from collections import defaultdict 
+
+columns = defauldict (list) #empty list creation
+
+# following codes will generate list for each column in csv file
+with open ('csv file path', 'r+') as f:
+    reader = csv.reader(f)
+    reader.next()
+    for row in reader:
+        for (i,v) in enumerate (row):
+            columns [i].append(v)
+Lat = columns [2]
+Long = columns [3]
+
+data = np.array (zip (Lat, Long)) #voila!
